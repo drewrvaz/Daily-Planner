@@ -2,3 +2,11 @@
 var currentDay = moment();
 $("#currentDay").text(currentDay.format("dddd, MMMM do, YYYY"));
 
+var saveBtn = document.getElementById("#saveBtn")
+var descritpion = $("#description")
+
+saveBtn.addEventListener("click", storeDescription)
+console.log("click")
+function storeDescription() {
+  localStorage.setItem("description", JSON.stringify(descritpion))
+}
