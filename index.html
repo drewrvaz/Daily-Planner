@@ -31,113 +31,60 @@
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
-      <div class="row time-block" id="9">
-        <div class="col-1 hour">
-          9AM
-        </div>
-        <textarea class="col-9 description">
-
-        </textarea>
-        <div class="col-1 d-flex align-items-center justify-content-center saveBtn">
-          <button id="saveBtn"><i class="bi bi-sd-card"></i></button>
-        </div>
-      </div>  
-
-      <div class="row time-block" id="10">
-        <div class="col-1 hour">
-          10AM
-        </div>
-        <textarea class="col-9 description">
-
-        </textarea>
-        <div class="col-1 d-flex align-items-center justify-content-center saveBtn">
-          <button id="saveBtn"><i class="bi bi-sd-card"></i></button>
-        </div>
-      </div>  
-        
-      <div class="row time-block" id="11">
-        <div class="col-1 hour">
-          11AM
-        </div>
-        <textarea class="col-9 description">
-
-        </textarea>
-        <div class="col-1 d-flex align-items-center justify-content-center saveBtn">
-          <button id="saveBtn"><i class="bi bi-sd-card"></i></button>
-        </div>
-      </div>
-
-      <div class="row time-block" id="12">
-        <div class="col-1 hour">
-          12PM
-        </div>
-        <textarea class="col-9 description">
-
-        </textarea>
-        <div class="col-1 d-flex align-items-center justify-content-center saveBtn">
-          <button id="saveBtn"><i class="bi bi-sd-card"></i></button>
-        </div>
-      </div>
-
-      <div class="row time-block" id="1">
-        <div class="col-1 hour">
-          1PM
-        </div>
-        <textarea class="col-9 description">
-
-        </textarea>
-        <div class="col-1 d-flex align-items-center justify-content-center saveBtn">
-          <button id="saveBtn"><i class="bi bi-sd-card"></i></button>
-        </div>
-      </div>
-
-      <div class="row time-block" id="2">
-        <div class="col-1 hour">
-          2PM
-        </div>
-        <textarea class="col-9 description">
-
-        </textarea>
-        <div class="col-1 d-flex align-items-center justify-content-center saveBtn">
-          <button id="saveBtn"><i class="bi bi-sd-card"></i></button>
-        </div>
-      </div>
-
-      <div class="row time-block" id="3">
-        <div class="col-1 hour">
-          3PM
-        </div>
-        <textarea class="col-9 description">
-
-        </textarea>
-        <div class="col-1 d-flex align-items-center justify-content-center saveBtn">
-          <button id="saveBtn"><i class="bi bi-sd-card"></i></button>
-        </div>
-      </div>
-
-      <div class="row time-block" id="4">
-        <div class="col-1 hour">
-          4PM
-        </div>
-        <textarea class="col-9 description">
-
-        </textarea>
-        <div class="col-1 d-flex align-items-center justify-content-center saveBtn">
-          <button id="saveBtn"><i class="bi bi-sd-card"></i></button>
-        </div>
-      </div>
-
-      <div class="row time-block" id="5">
-        <div class="col-1 hour" id="time">
-          5PM
-        </div>
-        <textarea class="col-9 description">
-
-        </textarea>
-        <div class="col-1 d-flex align-items-center justify-content-center saveBtn">
-          <button id="saveBtn"><i class="bi bi-sd-card"></i></button>
-        </div>
-      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Schedule</th>
+            <th>Save</th>
+          </tr>
+        </thead>
+        <tr id="hour-9" data-time="9" class="time-slot">
+          <td class="data-time">9:00AM</td>
+          <td class="data-schedule"><textarea name="9-text"></textarea></td>
+          <td class="data-save" id="9am"><i class="fa-solid fa-lock"></i></td>
+        </tr>
+        <tr id="hour-10" data-time="10" class="time-slot">
+          <td class="data-time">10:00AM</td>
+          <td class="data-schedule"><textarea name="10-text"></textarea></td>
+          <td class="data-save" id="10am"><i class="fa-solid fa-lock"></i></td>
+        </tr>
+        <tr id="hour-11" data-time="11" class="time-slot">
+          <td class="data-time">11:00AM</td>
+          <td class="data-schedule"><textarea name="11-text"></textarea></td>
+          <td class="data-save" id="11am"><i class="fa-solid fa-lock"></i></td>
+        </tr>
+        <tr id="hour-12" data-time="12" class="time-slot">
+          <td class="data-time">12:00PM</td>
+          <td class="data-schedule"><textarea name="12-text"></textarea></td>
+          <td class="data-save" id="12pm"><i class="fa-solid fa-lock"></i></td>
+        </tr>
+        <tr id="hour-1" data-time="1" class="time-slot">
+          <td class="data-time">1:00PM</td>
+          <td class="data-schedule"><textarea name=" 1-text"></textarea></td>
+          <td class="data-save" id="1am"><i class="fa-solid fa-lock"></i></td>
+        </tr>
+        <tr id="hour-2" data-time="2" class="time-slot">
+          <td class="data-time">2:00PM</td>
+          <td class="data-schedule"><textarea name="2-text"></textarea></td>
+          <td class="data-save" id="2am"><i class="fa-solid fa-lock"></i></td>
+        </tr>
+        <tr id="hour-3" data-time="3" class="time-slot">
+          <td class="data-time">3:00PM</td>
+          <td class="data-schedule"><textarea name="3-text"></textarea></td>
+          <td class="data-save" id="3am"><i class="fa-solid fa-lock"></i></td>
+        </tr>
+        <tr id="hour-4" data-time="4" class="time-slot">
+          <td class="data-time">4:00PM</td>
+          <td class="data-schedule"><textarea name="4-text"></textarea></td>
+          <td class="data-save" id="4am"><i class="fa-solid fa-lock"></i></td>
+        </tr>
+        <tr id="hour-5" data-time="5" class="time-slot">
+          <td class="data-time">5:00PM</td>
+          <td class="data-schedule"><textarea name="5-text"></textarea></td>
+          <td class="data-save" id="5am"><i class="fa-solid fa-lock"></i></td>
+        </tr>
+      </table>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
