@@ -5,6 +5,8 @@ $("#currentDay").text(currentDay.format("dddd, MMMM do, YYYY"));
 var saveBtn = document.getElementById("#saveBtn")
 var descritpion = $("#description")
 
+var currentHour = 
+
 saveBtn.addEventListener("click", storeDescription)
 console.log("click")
 function storeDescription() {
