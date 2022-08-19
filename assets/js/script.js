@@ -16,7 +16,10 @@ var hour2 = $("#14");
 var hour3 = $("#15");
 var hour4 = $("#16");
 var hour5 = $("#17");
-var currentDay = moment();
+currentDay = moment();
+var digitalClock = function() {
+  var currentDay = moment();
+}
 
 function setDailyCalendar() {
   $("#currentDay").text(currentDay.format("dddd, MMMM Do, YYYY"));
@@ -27,7 +30,7 @@ function setDailyCalendar() {
     var hours = localStorage.getItem(id);
 
     if (hours !== null) {
-      $(this).children(".description").val(description);
+      $(this).children(".description").val(hours);
     }
   });
 }
@@ -43,7 +46,7 @@ $(".saveBtn").on("click", function() {
 });
 
 function trackTime() {
-  hour = time.hours();
+  hour = moment().hour();
   $(".time-block").each(function() {
     var currentHour = parseInt($(this).attr("id"));
 
@@ -55,7 +58,8 @@ function trackTime() {
       $(this).addClass("past");
     }
   })
-}
+} console.log(trackTime)
+
 
 // Function to save and call the values from local storage for the user
 // $(document).ready(function() {
