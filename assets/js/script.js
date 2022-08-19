@@ -1,4 +1,3 @@
-// 
 var digitalClock = function() {
   // Variable to set the day and date at the top of the page
   var currentDay = moment();
@@ -8,6 +7,7 @@ var digitalClock = function() {
 digitalClock();
 setInterval(digitalClock, 1000);
 
+// Function to save and call the values from local storage for the user
 $(document).ready(function() {
   trackTime();
 
@@ -23,12 +23,15 @@ $(document).ready(function() {
 
 })
 
+// Tracks the current time so that it can be compared to change the background color of the input areas
 function trackTime() {
   var currentHour = moment().hour();
 
+  // Function to change the background color of the description area based on the time of day
   $(".description").each(function() {
     var descriptionHour = parseInt($(this).attr("id"));
 
+    // Changes the color depending on past, present, or future
     if (descriptionHour === currentHour) {
       $(this).addClass("present");
     }else if (descriptionHour < currentHour) {
@@ -39,6 +42,7 @@ function trackTime() {
   })
 }
 
+// When you click the save button, the user input is saved in local storage
 $(".saveBtn").on("click", function() {
   localStorage.setItem($(this).parent().attr("id"), $(this).prev().val());
 })
